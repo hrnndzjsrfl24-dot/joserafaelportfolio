@@ -19,12 +19,12 @@ themeButton.addEventListener("click", function () {
 
 (function () {
   document.querySelectorAll(".cx-carousel").forEach(function (root) {
-    const track   = root.querySelector(".cx-track");
-    const slides  = root.querySelectorAll(".cx-slide");
+    const track = root.querySelector(".cx-track");
+    const slides = root.querySelectorAll(".cx-slide");
     const titleEl = root.querySelector(".cx-title");
-    const textEl  = root.querySelector(".cx-text");
-    const dotsEl  = root.querySelector(".cx-dots");
-    const total   = slides.length;
+    const textEl = root.querySelector(".cx-text");
+    const dotsEl = root.querySelector(".cx-dots");
+    const total = slides.length;
     let index = 0;
 
     slides.forEach(function (_, i) {
@@ -32,25 +32,31 @@ themeButton.addEventListener("click", function () {
       dot.type = "button";
       dot.className = "cx-dot";
       dot.setAttribute("aria-label", "Go to slide " + (i + 1));
-      dot.addEventListener("click", function () { goTo(i); });
+      dot.addEventListener("click", function () {
+        goTo(i);
+      });
       dotsEl.appendChild(dot);
     });
 
     function goTo(i) {
       index = (i + total) % total;
-      track.style.transform = "translateX(" + (-index * 100) + "%)";
+      track.style.transform = "translateX(" + -index * 100 + "%)";
       titleEl.textContent = slides[index].dataset.title || "";
-      textEl.textContent  = slides[index].dataset.text || "";
+      textEl.textContent = slides[index].dataset.text || "";
       Array.prototype.forEach.call(dotsEl.children, function (d, n) {
         d.classList.toggle("cx-active", n === index);
       });
     }
 
-    root.querySelector(".cx-prev").addEventListener("click", function () { goTo(index - 1); });
-    root.querySelector(".cx-next").addEventListener("click", function () { goTo(index + 1); });
+    root.querySelector(".cx-prev").addEventListener("click", function () {
+      goTo(index - 1);
+    });
+    root.querySelector(".cx-next").addEventListener("click", function () {
+      goTo(index + 1);
+    });
 
     root.addEventListener("keydown", function (e) {
-      if (e.key === "ArrowLeft")  goTo(index - 1);
+      if (e.key === "ArrowLeft") goTo(index - 1);
       if (e.key === "ArrowRight") goTo(index + 1);
     });
 
@@ -63,7 +69,9 @@ themeButton.addEventListener("click", function () {
   const overlay = document.getElementById("popup-overlay");
   if (!form || !overlay) return;
 
-  function closePopup() { overlay.classList.remove("popup-show"); }
+  function closePopup() {
+    overlay.classList.remove("popup-show");
+  }
 
   form.addEventListener("submit", function (e) {
     e.preventDefault();
@@ -73,9 +81,16 @@ themeButton.addEventListener("click", function () {
 
   document.getElementById("popup-close").addEventListener("click", closePopup);
   overlay.addEventListener("click", function (e) {
-    if (e.target === overlay) closePopup(); 
+    if (e.target === overlay) closePopup();
   });
   document.addEventListener("keydown", function (e) {
     if (e.key === "Escape") closePopup();
   });
 })();
+
+const menuButton = document.getElementById("menu-button");
+const navLinks = document.getElementById("navLinks");
+
+menuButton.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
