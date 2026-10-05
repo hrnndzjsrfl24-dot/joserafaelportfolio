@@ -157,22 +157,23 @@ section h2 {
   }
 
   .nav-links {
-  left: 50%;
-  transform: translateX(-50%);
+     left: 50%;
+    transform: translateX(-50%);
 
-  max-width: calc(100vw - 100px);
+    max-width: calc(100vw - 100px);
 
-  display: flex;
-  gap: 45px;
+    overflow-x: auto;
+    overflow-y: hidden;
 
-  overflow-x: auto;
-  overflow-y: hidden;
+    flex-wrap: nowrap;
+    white-space: nowrap;
 
-  flex-wrap: nowrap;
-  white-space: nowrap;
+    scrollbar-width: none;
+  }
 
-  scrollbar-width: none;
-}
+  .nav-links::-webkit-scrollbar {
+    display: none;
+  }
 
   .nav-links a {
     flex-shrink: 0;
