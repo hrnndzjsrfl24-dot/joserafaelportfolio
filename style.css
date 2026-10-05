@@ -149,6 +149,12 @@ section h2 {
     justify-content: space-between;
     gap: 0;
   }
+  
+  .theme-button {
+    position: relative;
+    z-index: 100;
+    flex-shrink: 0;
+  }
 
   .nav-links {
     position: absolute;
