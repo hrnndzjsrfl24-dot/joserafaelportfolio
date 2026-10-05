@@ -91,6 +91,8 @@ themeButton.addEventListener("click", function () {
 const menuButton = document.getElementById("menu-button");
 const navLinks = document.getElementById("navLinks");
 
-menuButton.addEventListener("click", () => {
-  navLinks.classList.toggle("active");
-});
+if (menuButton && navLinks) {
+  menuButton.addEventListener("click", function () {
+    navLinks.classList.toggle("active");
+  });
+}
