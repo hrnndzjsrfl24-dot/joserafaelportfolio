@@ -88,11 +88,13 @@ themeButton.addEventListener("click", function () {
   });
 })();
 
-const menuButton = document.getElementById("menu-button");
-const navLinks = document.getElementById("navLinks");
+document.addEventListener("DOMContentLoaded", function () {
 
-if (menuButton && navLinks) {
+  const menuButton = document.getElementById("menu-button");
+  const navLinks = document.getElementById("navLinks");
+
   menuButton.addEventListener("click", function () {
     navLinks.classList.toggle("active");
   });
-}
+
+});
