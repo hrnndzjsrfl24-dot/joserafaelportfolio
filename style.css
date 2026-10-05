@@ -149,7 +149,7 @@ section h2 {
     justify-content: space-between;
     gap: 0;
   }
-  
+
   .theme-button {
     position: relative;
     z-index: 100;
@@ -157,19 +157,15 @@ section h2 {
   }
 
   .nav-links {
-    position: absolute;
-    left: 16px;
-    right: 16px;
-    transform: none;
+    left: 50%;
+    transform: translateX(-50%);
 
-    width: auto;
-
-    flex-wrap: nowrap;
-    justify-content: flex-start;
+    max-width: calc(100vw - 100px);
 
     overflow-x: auto;
     overflow-y: hidden;
 
+    flex-wrap: nowrap;
     white-space: nowrap;
 
     scrollbar-width: none;
