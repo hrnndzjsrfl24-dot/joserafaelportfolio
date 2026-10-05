@@ -152,7 +152,7 @@ section h2 {
 
   .theme-button {
     position: relative;
-    z-index: 100;
+    z-index: 120;
     flex-shrink: 0;
   }
 
