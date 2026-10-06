@@ -305,6 +305,7 @@ section h2 {
 }
 
 .fact-value {
+  text-align: center;
   font-size: 0.85rem;
   color: var(--text-dim);
 }
