@@ -112,7 +112,7 @@ section h2 {
   padding: 14px 28px;
 
   position: absolute;
-  left: 50%;
+  left: 30%;
   transform: translateX(-50%);
 
   overflow-x: auto;
