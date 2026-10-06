@@ -160,7 +160,7 @@ section h2 {
      left: 35%;
     transform: translateX(-50%);
 
-    max-width: calc(100vw - 180px);
+    max-width: calc(100vw - 100px);
 
     overflow-x: auto;
     overflow-y: hidden;
