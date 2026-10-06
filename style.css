@@ -112,7 +112,7 @@ section h2 {
   padding: 14px 28px;
 
   position: absolute;
-  left: 30%;
+  left: 50%;
   transform: translateX(-50%);
 
   overflow-x: auto;
@@ -157,7 +157,7 @@ section h2 {
   }
 
   .nav-links {
-     left: 50%;
+     left: 30%;
     transform: translateX(-50%);
 
     max-width: calc(100vw - 140px);
