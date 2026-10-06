@@ -144,7 +144,7 @@ section h2 {
 
 @media (max-width: 860px) {
   .logo-circle, .logo-text {
-    color: var(--bg-color);
+    display: none;
 
   }
   .navbar {
