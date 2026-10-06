@@ -1,10 +1,10 @@
 :root {
-  --bg-color: #000000; /* page background */
-  --card-color: #000000; /* background for cards/boxes */
-  --text-color: #f3efe4; /* main text color (light) */
-  --text-dim: #ffff; /* softer/lighter text color */
-  --navy-blue: #1e3a5f; /* accent color used for headings/borders */
-  --grey-accent: #5b6774; /* small labels */
+  --bg-color: #000000; 
+  --card-color: #000000; 
+  --text-color: #f3efe4; 
+  --text-dim: #ffff;
+  --navy-blue: #1e3a5f; 
+  --grey-accent: #5b6774;
   --nav-bg: rgba(10, 10, 10, 0.96);
 }
 
