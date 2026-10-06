@@ -88,13 +88,3 @@ themeButton.addEventListener("click", function () {
   });
 })();
 
-document.addEventListener("DOMContentLoaded", function () {
-
-  const menuButton = document.getElementById("menu-button");
-  const navLinks = document.getElementById("navLinks");
-
-  menuButton.addEventListener("click", function () {
-    navLinks.classList.toggle("active");
-  });
-
-});
