@@ -157,7 +157,7 @@ section h2 {
   }
 
   .nav-links {
-     left: 37%;
+     left: 40%;
     transform: translateX(-50%);
 
     max-width: calc(100vw - 100px);
