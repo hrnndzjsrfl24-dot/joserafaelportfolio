@@ -157,10 +157,10 @@ section h2 {
   }
 
   .nav-links {
-     left: 30%;
+     left: 40%;
     transform: translateX(-50%);
 
-    max-width: calc(100vw - 140px);
+    max-width: calc(100vw - 160px);
 
     overflow-x: auto;
     overflow-y: hidden;
