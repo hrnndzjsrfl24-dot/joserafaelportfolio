@@ -447,6 +447,21 @@ section h2 {
   margin: 0 auto;
 }
 
+.cx-live-link {
+  display: inline-block;
+  margin-top: 12px;
+  color: var(--navy-blue);
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.cx-live-link:hover {
+  opacity: 0.7;
+  text-decoration: underline;
+}
+
 .cx-dots {
   display: flex;
   justify-content: center;

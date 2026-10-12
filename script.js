@@ -38,11 +38,20 @@ themeButton.addEventListener("click", function () {
       dotsEl.appendChild(dot);
     });
 
+    const liveLink = root.querySelector(".cx-live-link");
+
     function goTo(i) {
       index = (i + total) % total;
       track.style.transform = "translateX(" + -index * 100 + "%)";
+
       titleEl.textContent = slides[index].dataset.title || "";
       textEl.textContent = slides[index].dataset.text || "";
+
+      liveLink.href = slides[index].dataset.link || "#";
+      liveLink.style.display = slides[index].dataset.link
+        ? "inline-block"
+        : "none";
+
       Array.prototype.forEach.call(dotsEl.children, function (d, n) {
         d.classList.toggle("cx-active", n === index);
       });
@@ -87,4 +96,3 @@ themeButton.addEventListener("click", function () {
     if (e.key === "Escape") closePopup();
   });
 })();
-
